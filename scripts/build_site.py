@@ -86,27 +86,27 @@ RETURN_FLIGHT = FlightInfo(
 
 
 # ---------------------------------------------------------------------------
-# Wikimedia Commons images
+# Local images (downloaded from Wikimedia Commons / Pexels)
 # ---------------------------------------------------------------------------
 
 IMG = {
-    "manuel_antonio_beach": "https://commons.wikimedia.org/wiki/Special:FilePath/Manuel_Antonio_National_Park_Costa_Rica.jpg",
-    "manuel_antonio_monkeys": "https://commons.wikimedia.org/wiki/Special:FilePath/White-headed_Capuchin_-_Manuel_Antonio_-_Costa_Rica.jpg",
-    "arenal_volcano": "https://commons.wikimedia.org/wiki/Special:FilePath/Arenal_Volcano_-_Costa_Rica_%281%29.jpg",
-    "arenal_bridges": "https://commons.wikimedia.org/wiki/Special:FilePath/Mistico_Hanging_Bridges_Park_-_Costa_Rica.jpg",
-    "sloth": "https://commons.wikimedia.org/wiki/Special:FilePath/Bradypus_variegatus_%28Puerto_Viejo%2C_CR%29.jpg",
-    "playa_conchal": "https://commons.wikimedia.org/wiki/Special:FilePath/Playa_Conchal.JPG",
-    "tamarindo": "https://commons.wikimedia.org/wiki/Special:FilePath/Tamarindo_Beach_-_Costa_Rica.jpg",
-    "quepos_fishing": "https://commons.wikimedia.org/wiki/Special:FilePath/Sport_fishing_in_Quepos%2C_Costa_Rica_%282011%29.jpg",
-    "la_fortuna_waterfall": "https://commons.wikimedia.org/wiki/Special:FilePath/Catarata_R%C3%ADo_Fortuna.jpg",
-    "hot_springs": "https://commons.wikimedia.org/wiki/Special:FilePath/Hot_springs_at_Arenal_Costa_Rica.jpg",
-    "guanacaste_beach": "https://commons.wikimedia.org/wiki/Special:FilePath/Guanacaste%2C_Costa_Rica.jpg",
-    "sjo_airport": "https://commons.wikimedia.org/wiki/Special:FilePath/Juan_Santamaria_Intl_Airport.jpg",
-    "costa_rica_fruit": "https://commons.wikimedia.org/wiki/Special:FilePath/Fruit_stand_in_Costa_Rica.jpg",
-    "howler_monkey": "https://commons.wikimedia.org/wiki/Special:FilePath/Mantled_howler_%28Alouatta_palliata%29.jpg",
-    "dominical": "https://commons.wikimedia.org/wiki/Special:FilePath/Dominical_Beach_Costa_Rica.jpg",
-    "los_suenos": "https://commons.wikimedia.org/wiki/Special:FilePath/Herradura_Bay_Costa_Rica.jpg",
-    "capuchin": "https://commons.wikimedia.org/wiki/Special:FilePath/Capuchin_Costa_Rica.jpg",
+    "manuel_antonio_beach": "images/manuel-antonio-beach.jpg",
+    "manuel_antonio_monkeys": "images/capuchin-manuel-antonio.jpg",
+    "arenal_volcano": "images/arenal-volcano.jpg",
+    "arenal_bridges": "images/arenal-hanging-bridges.jpg",
+    "sloth": "images/sloth.jpg",
+    "playa_conchal": "images/playa-conchal.jpg",
+    "tamarindo": "images/tamarindo-beach.jpg",
+    "quepos_fishing": "images/fishing-boat.jpg",
+    "la_fortuna_waterfall": "images/la-fortuna-waterfall.jpg",
+    "hot_springs": "images/hot-springs.jpg",
+    "guanacaste_beach": "images/guanacaste-coast.jpg",
+    "sjo_airport": "images/sjo-airport.jpg",
+    "costa_rica_fruit": "images/fruit-market.jpg",
+    "howler_monkey": "images/howler-monkey.jpg",
+    "dominical": "images/dominical-beach.jpg",
+    "los_suenos": "images/los-suenos.jpg",
+    "capuchin": "images/capuchin-beach.jpg",
 }
 
 
@@ -474,8 +474,15 @@ ITINERARIES = [
 # HTML helpers
 # ---------------------------------------------------------------------------
 
+SITE_URL = "https://dburkhardt.github.io/costa_rica_2026"
+
 HEAD_COMMON = f"""\
   <link rel="icon" href="{FAVICON_HREF}">
+  <meta property="og:image" content="{SITE_URL}/social-share.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Costa Rica 2026">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
@@ -555,6 +562,9 @@ def render_index() -> str:
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Costa Rica \u00b7 April 2026</title>
   <meta name="description" content="Costa Rica family trip, April 16 to 22, 2026. Three itinerary options to choose from.">
+  <meta property="og:title" content="Costa Rica \u00b7 April 2026">
+  <meta property="og:description" content="Costa Rica family trip, April 16 to 22, 2026. Three itinerary options to choose from.">
+  <meta property="og:url" content="{SITE_URL}/">
 {HEAD_COMMON}
 </head>
 <body class="site-home">
@@ -632,6 +642,9 @@ def render_itinerary(itin: Itinerary) -> str:
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{html.escape(itin.name)} \u00b7 Costa Rica</title>
   <meta name="description" content="{html.escape(itin.summary)}">
+  <meta property="og:title" content="{html.escape(itin.name)} \u00b7 Costa Rica">
+  <meta property="og:description" content="{html.escape(itin.summary)}">
+  <meta property="og:url" content="{SITE_URL}/{itin.filename}">
 {HEAD_COMMON}
 </head>
 <body class="site-day">
@@ -725,6 +738,9 @@ def render_logistics() -> str:
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Logistics \u00b7 Costa Rica</title>
   <meta name="description" content="Confirmed flights for Costa Rica, April 2026.">
+  <meta property="og:title" content="Logistics \u00b7 Costa Rica">
+  <meta property="og:description" content="Confirmed flights for Costa Rica, April 2026.">
+  <meta property="og:url" content="{SITE_URL}/logistics.html">
 {HEAD_COMMON}
 </head>
 <body class="site-day">
