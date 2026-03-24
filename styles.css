@@ -243,6 +243,7 @@ p {
   padding: 24px;
   display: grid;
   gap: 14px;
+  align-content: start;
 }
 
 .card-copy h2 {
@@ -489,7 +490,9 @@ p {
 
 .option-badge {
   display: inline-flex;
+  align-items: center;
   width: fit-content;
+  height: auto;
   padding: 6px 12px;
   border-radius: 999px;
   background: var(--accent);
