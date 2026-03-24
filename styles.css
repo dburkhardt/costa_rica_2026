@@ -547,6 +547,209 @@ p {
   border-radius: 16px;
 }
 
+/* Route map */
+.route-map-section {
+  margin: 0 0 36px;
+}
+
+.route-map-card {
+  overflow: hidden;
+}
+
+.route-map-card .eyebrow,
+.route-map-card h2 {
+  padding: 0 28px;
+}
+
+.route-map-card .eyebrow {
+  padding-top: 28px;
+}
+
+.route-map-card h2 {
+  margin-bottom: 18px;
+}
+
+.route-map-container {
+  width: 100%;
+  height: 420px;
+  z-index: 1;
+}
+
+.route-map-container .leaflet-container {
+  font-family: "DM Sans", sans-serif;
+}
+
+.driving-summary {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 28px;
+  border-top: 1px solid var(--line);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.driving-summary-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+}
+
+.driving-summary-item .stat-label {
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(26, 46, 31, 0.56);
+  font-weight: 700;
+}
+
+.driving-summary-item strong {
+  font-size: 1.1rem;
+  color: var(--navy);
+}
+
+/* Itinerary overview table */
+.itinerary-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  min-width: 640px;
+}
+
+.itinerary-table th,
+.itinerary-table td {
+  padding: 16px 14px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.itinerary-table th {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(26, 46, 31, 0.56);
+  padding-top: 0;
+  padding-bottom: 8px;
+}
+
+.itinerary-table td {
+  font-size: 0.95rem;
+  background: rgba(240, 247, 242, 0.95);
+  border-top: 1px solid rgba(26, 71, 49, 0.06);
+  border-bottom: 1px solid rgba(26, 71, 49, 0.08);
+}
+
+.itinerary-table tbody td:first-child {
+  border-left: 1px solid rgba(26, 71, 49, 0.08);
+  border-top-left-radius: 18px;
+  border-bottom-left-radius: 18px;
+  font-weight: 700;
+  color: var(--navy);
+  white-space: nowrap;
+}
+
+.itinerary-table tbody td:last-child {
+  border-right: 1px solid rgba(26, 71, 49, 0.08);
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+
+.itinerary-table tbody tr.highlight td {
+  background: linear-gradient(180deg, rgba(45, 122, 79, 0.12), rgba(168, 213, 186, 0.18));
+  border-top-color: rgba(45, 122, 79, 0.2);
+  border-bottom-color: rgba(45, 122, 79, 0.22);
+}
+
+.itinerary-table tbody tr.highlight td:first-child {
+  border-left-color: rgba(45, 122, 79, 0.24);
+}
+
+.itinerary-table tbody tr.highlight td:last-child {
+  border-right-color: rgba(45, 122, 79, 0.24);
+}
+
+.driving-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.driving-tag--green {
+  background: rgba(45, 122, 79, 0.12);
+  color: #1a6b3a;
+}
+
+.driving-tag--yellow {
+  background: rgba(212, 167, 74, 0.2);
+  color: #8a6d1e;
+}
+
+.driving-tag--red {
+  background: rgba(180, 60, 50, 0.12);
+  color: #9a3030;
+}
+
+/* Compare callout */
+.compare-callout {
+  margin-top: 36px;
+  text-align: center;
+  padding: 36px 28px;
+}
+
+.compare-callout p {
+  max-width: 540px;
+  margin: 0 auto 20px;
+}
+
+/* Hotel gallery */
+.hotel-gallery-section {
+  margin: 36px 0;
+}
+
+.hotel-gallery-section .section-head {
+  margin-bottom: 16px;
+}
+
+.hotel-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+}
+
+.hotel-gallery-grid img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(26, 71, 49, 0.08);
+  box-shadow: 0 8px 24px rgba(10, 30, 18, 0.08);
+}
+
+/* Leaflet overrides */
+.leaflet-popup-content-wrapper {
+  border-radius: 16px;
+  font-family: "DM Sans", sans-serif;
+  box-shadow: var(--shadow);
+}
+
+.leaflet-popup-content {
+  font-size: 0.92rem;
+  color: var(--navy);
+  margin: 12px 16px;
+}
+
+.leaflet-popup-content strong {
+  display: block;
+  font-family: "Playfair Display", serif;
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+
 .reveal {
   animation: reveal-up 700ms ease both;
 }
@@ -580,6 +783,19 @@ p {
   h1 {
     font-size: clamp(2.4rem, 11vw, 4rem);
   }
+
+  .route-map-container {
+    height: 320px;
+  }
+
+  .driving-summary {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hotel-gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
 }
 
 @media (max-width: 640px) {
@@ -604,5 +820,14 @@ p {
   .nav-ghost {
     padding: 9px 12px;
     font-size: 0.92rem;
+  }
+
+  .route-map-container {
+    height: 260px;
+  }
+
+  .hotel-gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
   }
 }

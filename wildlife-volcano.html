@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wildlife &amp; Volcano · Costa Rica 2026</title>
+  <meta name="description" content="Manuel Antonio sloths + Arenal volcano hot springs. ~12 hours total driving.">
+  <meta property="og:title" content="Wildlife & Volcano · Costa Rica 2026">
+  <meta property="og:description" content="Manuel Antonio sloths + Arenal volcano hot springs. ~12 hours total driving.">
+  <meta property="og:url" content="https://dburkhardt.github.io/costa_rica_2026/wildlife-volcano.html">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%87%A8%F0%9F%87%B7%3C/text%3E%3C/svg%3E">
+  <meta property="og:image" content="https://dburkhardt.github.io/costa_rica_2026/social-share.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Costa Rica 2026">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+</head>
+<body class="site-day">
+  <header class="site-nav">
+    <nav>
+      <a href="index.html" class="nav-home">Costa Rica 2026</a>
+      <a href="wildlife-volcano.html" class="day-link active">Wildlife &amp; Volcano</a>
+      <a href="wildlife-resort.html" class="day-link">Wildlife &amp; Resort</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero hero-day reveal">
+      <div class="hero-copy">
+        <span class="option-badge">Option A</span>
+        <div class="eyebrow">Costa Rica · Apr 16–22, 2026</div>
+        <h1>Wildlife &amp; Volcano</h1>
+        <p>Three nights in Manuel Antonio for sloths, monkeys, and rainforest beaches. One night at Arenal for volcanic hot springs and waterfalls. The wildlife-heavy option with less driving.</p>
+        <div class="hero-actions">
+          <a href="#route-map" class="btn-primary">See route</a>
+          <a href="#days" class="btn-secondary">Day by day</a>
+        </div>
+      </div>
+      <div class="hero-panel">
+        <img src="images/wildlife/sloth-1.jpg" alt="Three-toed sloth in Manuel Antonio">
+      </div>
+    </section>
+
+    <!-- ROUTE MAP -->
+    <section class="route-map-section reveal" id="route-map">
+      <div class="detail-card route-map-card">
+        <div class="eyebrow">Route overview</div>
+        <h2>Your driving route</h2>
+        <div id="route-map-container" class="route-map-container"></div>
+        <div class="driving-summary">
+          <div class="driving-summary-item">
+            <span class="stat-label">Total driving</span>
+            <strong>~12–13 hours</strong>
+          </div>
+          <div class="driving-summary-item">
+            <span class="stat-label">Longest leg</span>
+            <strong>5–6 hrs (MA → Arenal)</strong>
+          </div>
+          <div class="driving-summary-item">
+            <span class="stat-label">Locations</span>
+            <strong>3 stops</strong>
+          </div>
+          <div class="driving-summary-item">
+            <span class="stat-label">Hotels</span>
+            <strong>2 + airport hotel</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ITINERARY TABLE -->
+    <section class="section-head reveal" id="itinerary">
+      <div class="eyebrow">At a glance</div>
+      <h2>Day-by-day overview</h2>
+    </section>
+    <div class="detail-card reveal">
+      <div class="table-wrap">
+        <table class="itinerary-table">
+          <thead>
+            <tr>
+              <th>Day</th>
+              <th>Date</th>
+              <th>Plan</th>
+              <th>Driving</th>
+              <th>Hotel</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Day 0</td>
+              <td><span class="flight-date">Thu Apr 16</span></td>
+              <td>Arrive SJO 10:35 PM</td>
+              <td>—</td>
+              <td>Courtyard by Marriott SJO</td>
+            </tr>
+            <tr>
+              <td>Day 1</td>
+              <td><span class="flight-date">Fri Apr 17</span></td>
+              <td>Drive to Manuel Antonio, settle in</td>
+              <td><span class="driving-tag driving-tag--yellow">3.5 hrs</span></td>
+              <td>Si Como No / Tulemar</td>
+            </tr>
+            <tr class="highlight">
+              <td>Day 2</td>
+              <td><span class="flight-date">Sat Apr 18</span></td>
+              <td>Manuel Antonio National Park — sloths!</td>
+              <td>—</td>
+              <td>Si Como No / Tulemar</td>
+            </tr>
+            <tr>
+              <td>Day 3</td>
+              <td><span class="flight-date">Sun Apr 19</span></td>
+              <td>Beaches, kayaking, catamaran, wildlife</td>
+              <td>—</td>
+              <td>Si Como No / Tulemar</td>
+            </tr>
+            <tr>
+              <td>Day 4</td>
+              <td><span class="flight-date">Mon Apr 20</span></td>
+              <td>Drive to Arenal, hot springs evening</td>
+              <td><span class="driving-tag driving-tag--red">5–6 hrs</span></td>
+              <td>Arenal hotel TBD</td>
+            </tr>
+            <tr>
+              <td>Day 5</td>
+              <td><span class="flight-date">Tue Apr 21</span></td>
+              <td>Morning volcano/waterfall, drive to SJO</td>
+              <td><span class="driving-tag driving-tag--yellow">3–3.5 hrs</span></td>
+              <td>Courtyard by Marriott SJO</td>
+            </tr>
+            <tr>
+              <td>Day 6</td>
+              <td><span class="flight-date">Wed Apr 22</span></td>
+              <td>Depart SJO 7:55 AM (AC 956)</td>
+              <td>—</td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- PROS/CONS + AT A GLANCE -->
+    <section class="content-grid">
+      <article class="detail-card reveal">
+        <div class="eyebrow">Why this option</div>
+        <h2>Best for wildlife lovers</h2>
+        <p>Three full days in Manuel Antonio means multiple chances to see sloths, capuchins, howler monkeys, and scarlet macaws. The Arenal night adds hot springs and a volcano experience without adding excessive driving.</p>
+        <div class="pros-cons">
+          <div>
+            <h3>Pros</h3>
+            <ul>
+              <li>3 nights in Manuel Antonio — best chance to see sloths</li>
+              <li>Less total driving (~12 hrs vs ~18 hrs)</li>
+              <li>Two distinct experiences: rainforest coast + volcanic highlands</li>
+              <li>Arenal hot springs are a perfect wind-down</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Cons</h3>
+            <ul>
+              <li>No luxury beach resort</li>
+              <li>Still one long drive day (MA → Arenal, 5–6 hrs)</li>
+              <li>Only 1 night at Arenal — not much margin</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+      <aside class="detail-card reveal accent-card">
+        <div class="eyebrow">At a glance</div>
+        <h2>The numbers</h2>
+        <div class="stat-row">
+          <span class="stat-label">Total driving</span>
+          <strong>~12–13 hrs</strong>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Hotels</span>
+          <strong>2 + airport</strong>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Sloth days</span>
+          <strong>3 days</strong>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Hot springs</span>
+          <strong>1 evening</strong>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Full days</span>
+          <strong>5 (Fri–Tue)</strong>
+        </div>
+      </aside>
+    </section>
+
+    <!-- DAY-BY-DAY DETAIL -->
+    <section class="section-head reveal" id="days">
+      <div class="eyebrow">Day by day</div>
+      <h2>The full plan</h2>
+      <p>From arrival to departure, everything mapped out.</p>
+    </section>
+
+    <!-- Day 0 -->
+    <div class="day-block reveal">
+      <div class="eyebrow">Day 0 · Thu Apr 16</div>
+      <h3>Arrive San José</h3>
+      <p>Air Transat TS 112 lands at SJO at 10:35 PM. Clear customs, pick up rental car, and drive 5 minutes to the Courtyard by Marriott SJO Alajuela. Crash for the night — early start tomorrow.</p>
+      <ul>
+        <li>Flight: Air Transat TS 112, YYZ → SJO, departs 7:05 PM, arrives 10:35 PM</li>
+        <li>Travelers: Daniel, Emilie, Madison</li>
+        <li>Hotel: Courtyard by Marriott San José Airport Alajuela (5 min from SJO)</li>
+      </ul>
+      <div class="day-gallery">
+        <img src="images/sjo-airport.jpg" alt="SJO Airport at sunset">
+        <img src="images/courtyard-sjo/exterior.jpg" alt="Courtyard by Marriott SJO Alajuela">
+      </div>
+    </div>
+
+    <!-- Day 1 -->
+    <div class="day-block reveal">
+      <div class="eyebrow">Day 1 · Fri Apr 17 · <span class="driving-tag driving-tag--yellow">3.5 hr drive</span></div>
+      <h3>Drive to Manuel Antonio</h3>
+      <p>Leave early morning for the 3.5-hour drive south along the Pacific coast to Manuel Antonio. Check into Si Como No or Tulemar and spend the afternoon exploring the area — maybe a sunset catamaran cruise or just settling into the jungle hotel.</p>
+      <ul>
+        <li>Depart SJO area ~7:00 AM, arrive Manuel Antonio ~10:30 AM</li>
+        <li>Route: Highway 27 to Orotina, then coastal road south through Jacó and Quepos</li>
+        <li>Afternoon: Explore hotel grounds, swim, wildlife spotting from your balcony</li>
+        <li>Evening: Dinner at the hotel or in Quepos town</li>
+      </ul>
+      <div class="day-gallery">
+        <img src="images/manuel-antonio-beach.jpg" alt="Manuel Antonio beach">
+        <img src="images/capuchin-beach.jpg" alt="Capuchin monkey in the trees">
+      </div>
+    </div>
+
+    <!-- Day 2 - THE SLOTH DAY -->
+    <div class="day-block reveal" style="border-left: 4px solid var(--teal);">
+      <div class="eyebrow">Day 2 · Sat Apr 18 · The sloth day</div>
+      <h3>Manuel Antonio National Park</h3>
+      <p>The main event. Gates open at 7 AM — hire a guide with a spotting scope for the best chance to see three-toed sloths, two-toed sloths, capuchins, howler monkeys, and scarlet macaws. After the guided walk, swim at Playa Manuel Antonio inside the park.</p>
+      <ul>
+        <li>Arrive at park gates by 7:00 AM (before crowds)</li>
+        <li>Guided tour: 2–3 hours through primary rainforest trails</li>
+        <li>Sloth hotspots: look in cecropia trees along the Perezoso trail</li>
+        <li>Swimming at Playa Manuel Antonio and Playa Espadilla Sur</li>
+        <li>Park closes at 3:00 PM — no outside food, no plastic bags</li>
+        <li>Afternoon: relax at hotel pool, optional night wildlife tour</li>
+      </ul>
+      <div class="day-gallery">
+        <img src="images/wildlife/sloth-1.jpg" alt="Three-toed sloth in Manuel Antonio">
+        <img src="images/wildlife/sloth-3.jpg" alt="Three-toed sloth smiling">
+        <img src="images/wildlife/sloth-baby.jpg" alt="Sloth in the canopy">
+        <img src="images/wildlife/howler-monkey-1.jpg" alt="Howler monkey in the canopy">
+        <img src="images/capuchin-manuel-antonio.jpg" alt="White-faced capuchin monkey">
+      </div>
+    </div>
+
+    <!-- Day 3 -->
+    <div class="day-block reveal">
+      <div class="eyebrow">Day 3 · Sun Apr 19</div>
+      <h3>Beaches, Wildlife &amp; Adventure</h3>
+      <p>A full free day in Manuel Antonio. Mix and match from the options below — or just lounge at the hotel pool with monkeys visiting your balcony.</p>
+      <ul>
+        <li>Kayaking or stand-up paddleboarding along the coast</li>
+        <li>Sunset catamaran cruise with snorkeling</li>
+        <li>Whitewater rafting on the Savegre or Naranjo river</li>
+        <li>Explore Quepos town and the marina</li>
+        <li>More wildlife spotting — sloths are easier to find on a second day</li>
+      </ul>
+      <div class="day-gallery">
+        <img src="images/playa-conchal.jpg" alt="Pacific coast beach">
+        <img src="images/wildlife/scarlet-macaw-1.jpg" alt="Scarlet macaw">
+      </div>
+    </div>
+
+    <!-- Day 4 -->
+    <div class="day-block reveal">
+      <div class="eyebrow">Day 4 · Mon Apr 20 · <span class="driving-tag driving-tag--red">5–6 hr drive</span></div>
+      <h3>Drive to Arenal &amp; Hot Springs</h3>
+      <p>The longest drive day. Leave Manuel Antonio early morning and head north through the mountains to La Fortuna and Arenal Volcano. Check in, then reward yourself with an evening at Tabacon Hot Springs — natural thermal pools set in lush jungle with views of the volcano.</p>
+      <ul>
+        <li>Depart Manuel Antonio ~7:00 AM, arrive La Fortuna ~1:00 PM</li>
+        <li>Route: North through San Isidro, then via San Ramón to La Fortuna</li>
+        <li>Check into Arenal hotel, lunch, rest</li>
+        <li>Evening: Tabacon Thermal Resort — 20+ natural hot spring pools</li>
+        <li>Dinner at Tabacon (package available) or in La Fortuna town</li>
+      </ul>
+      <div class="day-gallery">
+        <img src="images/arenal/volcano.jpg" alt="Arenal Volcano">
+        <img src="images/arenal/tabacon-hot-springs.jpg" alt="Tabacon Hot Springs">
+        <img src="images/arenal/hot-springs-pool.jpg" alt="Hot springs pool in the jungle">
+      </div>
+    </div>
+
+    <!-- Day 5 -->
+    <div class="day-block reveal">
+      <div class="eyebrow">Day 5 · Tue Apr 21 · <span class="driving-tag driving-tag--yellow">3–3.5 hr drive</span></div>
+      <h3>Arenal Morning, Drive to SJO</h3>
+      <p>Make the most of the morning at Arenal — hike to the La Fortuna Waterfall (500 steps down, 500 back up!) or walk the hanging bridges through the canopy. After lunch, drive 3 hours back to the airport area for your final night.</p>
+      <ul>
+        <li>Morning option A: La Fortuna Waterfall — stunning 70-meter cascade</li>
+        <li>Morning option B: Arenal Hanging Bridges — suspension bridges through rainforest</li>
+        <li>Morning option C: Guided volcano hike along old lava flows</li>
+        <li>Depart La Fortuna ~1:00 PM, arrive SJO area ~4:00 PM</li>
+        <li>Hotel: Courtyard by Marriott SJO Alajuela</li>
+        <li>Early bedtime — 7:55 AM flight tomorrow!</li>
+      </ul>
+      <div class="day-gallery">
+        <img src="images/arenal/la-fortuna-waterfall.jpg" alt="La Fortuna Waterfall">
+        <img src="images/arenal/hanging-bridges.jpg" alt="Arenal Hanging Bridges">
+      </div>
+    </div>
+
+    <!-- Day 6 -->
+    <div class="day-block reveal">
+      <div class="eyebrow">Day 6 · Wed Apr 22</div>
+      <h3>Fly Home</h3>
+      <p>Early morning departure. Air Canada AC 956 departs SJO at 7:55 AM — be at the airport by 5:30 AM. Emilie and Madison fly home to Toronto; Daniel continues to Brazil.</p>
+      <ul>
+        <li>Flight: Air Canada AC 956, SJO → YYZ, departs 7:55 AM, arrives 3:05 PM</li>
+        <li>Return travelers: Emilie &amp; Madison</li>
+        <li>Daniel: separate flight to Brazil for work</li>
+      </ul>
+    </div>
+
+    <!-- HOTEL GALLERIES -->
+    <section class="section-head reveal" id="hotels">
+      <div class="eyebrow">Where you'll stay</div>
+      <h2>The hotels</h2>
+      <p>Two hotel options in Manuel Antonio, plus the Arenal area and airport transit hotel.</p>
+    </section>
+
+    <!-- Si Como No Gallery -->
+    <div class="day-block reveal">
+      <div class="eyebrow">Manuel Antonio · Nights 1–3</div>
+      <h3>Si Como No Resort, Spa &amp; Wildlife Refuge</h3>
+      <p>A sustainably-minded jungle resort perched above Manuel Antonio National Park. Two pools (one adults-only), two restaurants, a private 46-seat movie theater, butterfly atrium, and an on-site wildlife refuge. 5-minute shuttle to the beach.</p>
+      <div class="hotel-gallery-grid">
+        <img src="images/si-como-no/family-pool-waterslide.jpg" alt="Si Como No family pool with waterslide" loading="lazy">
+        <img src="images/si-como-no/room-interior.jpg" alt="Si Como No room interior" loading="lazy">
+        <img src="images/si-como-no/restaurant-dining.jpg" alt="Si Como No restaurant" loading="lazy">
+        <img src="images/si-como-no/jungle-grounds.jpg" alt="Jungle grounds at Si Como No" loading="lazy">
+        <img src="images/si-como-no/butterfly-blue-morpho.jpg" alt="Blue morpho butterfly" loading="lazy">
+        <img src="images/si-como-no/exterior-aerial.webp" alt="Si Como No aerial view" loading="lazy">
+        <img src="images/si-como-no/spa.webp" alt="Si Como No spa" loading="lazy">
+        <img src="images/si-como-no/adult-pool-spa.jpg" alt="Adults-only pool" loading="lazy">
+        <img src="images/si-como-no/ocean-view.jpg" alt="Ocean view from Si Como No" loading="lazy">
+        <img src="images/si-como-no/lobby-aerial.jpg" alt="Si Como No lobby" loading="lazy">
+      </div>
+    </div>
+
+    <!-- Tulemar Gallery -->
+    <div class="day-block reveal">
+      <div class="eyebrow">Manuel Antonio · Nights 1–3 (Alternative)</div>
+      <h3>Tulemar Resort</h3>
+      <p>TripAdvisor's #1 hotel in Costa Rica. A gated 33-acre property with private bungalows and villas, a private beach, 4 pools, and incredible wildlife on the grounds — three types of monkeys, two types of sloths, scarlet macaws, and toucans right on the property.</p>
+      <div class="hotel-gallery-grid">
+        <img src="images/tulemar/beach.jpg" alt="Tulemar private beach" loading="lazy">
+        <img src="images/tulemar/bungalow-exterior.jpg" alt="Tulemar bungalow exterior" loading="lazy">
+        <img src="images/tulemar/infinity-pool.jpg" alt="Tulemar infinity pool" loading="lazy">
+        <img src="images/tulemar/bungalow-octagonal.jpg" alt="Tulemar octagonal bungalow" loading="lazy">
+        <img src="images/tulemar/ocean-view-rainforest.jpg" alt="Ocean view through rainforest" loading="lazy">
+        <img src="images/tulemar/tropical-gardens.jpg" alt="Tulemar tropical gardens" loading="lazy">
+        <img src="images/tulemar/wildlife-header.jpg" alt="Wildlife on Tulemar property" loading="lazy">
+        <img src="images/tulemar/tulemar-beach-aerial.jpg" alt="Aerial view of Tulemar beach" loading="lazy">
+        <img src="images/tulemar/villa-aerial.jpg" alt="Aerial view of Tulemar villa" loading="lazy">
+        <img src="images/tulemar/resort-overview.jpg" alt="Tulemar resort overview" loading="lazy">
+      </div>
+    </div>
+
+    <!-- Arenal Gallery -->
+    <div class="day-block reveal">
+      <div class="eyebrow">Arenal · Night 4</div>
+      <h3>Arenal / La Fortuna Area</h3>
+      <p>The Arenal volcano region offers hot springs, waterfalls, hanging bridges, and one of the most dramatic landscapes in Costa Rica. Hotel TBD — options range from hot springs resorts like Tabacon to boutique lodges in La Fortuna.</p>
+      <div class="hotel-gallery-grid">
+        <img src="images/arenal/volcano.jpg" alt="Arenal Volcano" loading="lazy">
+        <img src="images/arenal/tabacon-hot-springs.jpg" alt="Tabacon Hot Springs" loading="lazy">
+        <img src="images/arenal/hanging-bridges.jpg" alt="Arenal Hanging Bridges" loading="lazy">
+        <img src="images/arenal/la-fortuna-waterfall.jpg" alt="La Fortuna Waterfall" loading="lazy">
+        <img src="images/arenal/hot-springs-pool.jpg" alt="Hot springs pool" loading="lazy">
+        <img src="images/arenal/hanging-bridges-canopy.jpg" alt="Hanging bridges canopy walk" loading="lazy">
+        <img src="images/arenal/baldi-hot-springs.jpg" alt="Baldi Hot Springs" loading="lazy">
+        <img src="images/arenal/lake-arenal.jpg" alt="Lake Arenal" loading="lazy">
+        <img src="images/arenal/rainforest-trail.jpg" alt="Arenal rainforest trail" loading="lazy">
+        <img src="images/arenal/waterfall-rappelling.jpg" alt="Waterfall rappelling" loading="lazy">
+        <img src="images/arenal/tabacon-pool-bar.jpg" alt="Tabacon hot springs pools" loading="lazy">
+        <img src="images/arenal/volcano-panoramic.jpg" alt="Arenal Volcano panoramic" loading="lazy">
+      </div>
+    </div>
+
+    <!-- COMPARE CALLOUT -->
+    <section class="detail-card reveal compare-callout">
+      <div class="eyebrow">Compare</div>
+      <h2>Want a luxury resort instead?</h2>
+      <p>The <a href="wildlife-resort.html"><strong>Wildlife &amp; Resort</strong></a> option swaps the 3-night Manuel Antonio stay for a quick sloth visit + 3 nights at the JW Marriott Guanacaste. More driving (~18 hrs total), but a luxury beach resort payoff.</p>
+      <a href="wildlife-resort.html" class="btn-primary">See Wildlife &amp; Resort</a>
+    </section>
+
+    <!-- PAGER -->
+    <section class="pager">
+      <a href="index.html" class="pager-link">All options</a>
+      <a href="wildlife-resort.html" class="pager-link">Wildlife &amp; Resort →</a>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script>
+  (function() {
+    var map = L.map('route-map-container', {
+      scrollWheelZoom: false,
+      dragging: !L.Browser.mobile
+    });
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 18
+    }).addTo(map);
+
+    // Locations
+    var SJO    = [10.0005, -84.2104];
+    var MA     = [9.3920, -84.1380];
+    var ARENAL = [10.4627, -84.6432];
+
+    // Custom marker icon
+    function makeIcon(label) {
+      return L.divIcon({
+        className: 'route-marker',
+        html: '<div style="position:relative;width:22px;height:22px;background:#1a4731;border:3px solid #d4a74a;border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,0.3);"></div>',
+        iconSize: [22, 22],
+        iconAnchor: [11, 11],
+        popupAnchor: [0, -14]
+      });
+    }
+
+    // Markers
+    L.marker(SJO, {icon: makeIcon()}).addTo(map)
+      .bindPopup('<strong>SJO Airport</strong>Nights 0 &amp; 5<br>Courtyard by Marriott');
+    L.marker(MA, {icon: makeIcon()}).addTo(map)
+      .bindPopup('<strong>Manuel Antonio</strong>Nights 1–3<br>Si Como No / Tulemar');
+    L.marker(ARENAL, {icon: makeIcon()}).addTo(map)
+      .bindPopup('<strong>Arenal / La Fortuna</strong>Night 4<br>Hot springs &amp; volcano');
+
+    // Route polylines with waypoints following roads
+    var routeStyle = {color: '#1a4731', weight: 3, opacity: 0.7, dashArray: '8 6'};
+
+    // SJO → Manuel Antonio (via Highway 27 through Orotina, then south through Jacó/Quepos)
+    var sjoToMA = [
+      SJO,
+      [9.9400, -84.2800],  // west toward Atenas
+      [9.8700, -84.4300],  // Orotina area
+      [9.7500, -84.5200],  // Tárcoles / Carara
+      [9.6200, -84.5800],  // Jacó area
+      [9.4800, -84.3400],  // Parrita
+      [9.4300, -84.1600],  // Quepos
+      MA
+    ];
+
+    // Manuel Antonio → Arenal (north through San Isidro, up through mountains)
+    var maToArenal = [
+      MA,
+      [9.4300, -84.1600],  // Quepos
+      [9.5500, -84.0800],  // inland
+      [9.7000, -84.0500],  // San Isidro area
+      [9.9000, -84.1500],  // through central valley
+      [10.0500, -84.2500], // near SJO
+      [10.1500, -84.3500], // north toward San Ramón
+      [10.3500, -84.5200], // Arenal approach
+      ARENAL
+    ];
+
+    // Arenal → SJO (direct route south)
+    var arenalToSJO = [
+      ARENAL,
+      [10.3500, -84.5200],
+      [10.2000, -84.4000],
+      [10.1000, -84.3200],
+      [10.0500, -84.2500],
+      SJO
+    ];
+
+    L.polyline(sjoToMA, routeStyle).addTo(map);
+    L.polyline(maToArenal, routeStyle).addTo(map);
+    L.polyline(arenalToSJO, routeStyle).addTo(map);
+
+    // Driving time labels
+    function timeLabel(text, latlng) {
+      return L.marker(latlng, {
+        icon: L.divIcon({
+          className: 'route-time-label',
+          html: '<span style="background:#fff;border:1px solid #1a4731;border-radius:999px;padding:4px 10px;font-size:0.75rem;font-weight:700;color:#1a4731;white-space:nowrap;box-shadow:0 2px 6px rgba(0,0,0,0.15);">' + text + '</span>',
+          iconSize: [0, 0],
+          iconAnchor: [-8, 10]
+        })
+      });
+    }
+
+    timeLabel('3.5 hrs', [9.7500, -84.5200]).addTo(map);
+    timeLabel('5–6 hrs', [9.9000, -84.1000]).addTo(map);
+    timeLabel('3–3.5 hrs', [10.2500, -84.4200]).addTo(map);
+
+    // Fit bounds
+    map.fitBounds([SJO, MA, ARENAL], {padding: [50, 50]});
+  })();
+  </script>
+</body>
+</html>

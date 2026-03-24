@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wildlife &amp; Resort · Costa Rica 2026</title>
+  <meta name="description" content="Quick sloth visit at Manuel Antonio + 3 nights at JW Marriott Guanacaste. ~17–19 hours total driving.">
+  <meta property="og:title" content="Wildlife & Resort · Costa Rica 2026">
+  <meta property="og:description" content="Quick sloth visit at Manuel Antonio + 3 nights at JW Marriott Guanacaste. ~17–19 hours total driving.">
+  <meta property="og:url" content="https://dburkhardt.github.io/costa_rica_2026/wildlife-resort.html">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%87%A8%F0%9F%87%B7%3C/text%3E%3C/svg%3E">
+  <meta property="og:image" content="https://dburkhardt.github.io/costa_rica_2026/social-share.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Costa Rica 2026">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+</head>
+<body class="site-day">
+  <header class="site-nav">
+    <nav>
+      <a href="index.html" class="nav-home">Costa Rica 2026</a>
+      <a href="wildlife-volcano.html" class="day-link">Wildlife &amp; Volcano</a>
+      <a href="wildlife-resort.html" class="day-link active">Wildlife &amp; Resort</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero hero-day reveal">
+      <div class="hero-copy">
+        <span class="option-badge">Option B</span>
+        <div class="eyebrow">Costa Rica · Apr 16–22, 2026</div>
+        <h1>Wildlife &amp; Resort</h1>
+        <p>A quick sloth fix at Manuel Antonio, then three nights of luxury at the JW Marriott Guanacaste. More driving, but a beach resort payoff. Optional Arenal stop on the way home.</p>
+        <div class="hero-actions">
+          <a href="#route-map" class="btn-primary">See route</a>
+          <a href="#days" class="btn-secondary">Day by day</a>
+        </div>
+      </div>
+      <div class="hero-panel">
+        <img src="images/guanacaste-coast.jpg" alt="Guanacaste coast sunset">
+      </div>
+    </section>
+
+    <!-- ROUTE MAP -->
+    <section class="route-map-section reveal" id="route-map">
+      <div class="detail-card route-map-card">
+        <div class="eyebrow">Route overview</div>
+        <h2>Your driving route</h2>
+        <div id="route-map-container" class="route-map-container"></div>
+        <div class="driving-summary">
+          <div class="driving-summary-item">
+            <span class="stat-label">Total driving</span>
+            <strong>~17–19 hours</strong>
+          </div>
+          <div class="driving-summary-item">
+            <span class="stat-label">Longest leg</span>
+            <strong>6–7 hrs (MA → JW Marriott)</strong>
+          </div>
+          <div class="driving-summary-item">
+            <span class="stat-label">Locations</span>
+            <strong>3 stops</strong>
+          </div>
+          <div class="driving-summary-item">
+            <span class="stat-label">Hotels</span>
+            <strong>2 + airport hotel</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ITINERARY TABLE -->
+    <section class="section-head reveal" id="itinerary">
+      <div class="eyebrow">At a glance</div>
+      <h2>Day-by-day overview</h2>
+    </section>
+    <div class="detail-card reveal">
+      <div class="table-wrap">
+        <table class="itinerary-table">
+          <thead>
+            <tr>
+              <th>Day</th>
+              <th>Date</th>
+              <th>Plan</th>
+              <th>Driving</th>
+              <th>Hotel</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Day 0</td>
+              <td><span class="flight-date">Thu Apr 16</span></td>
+              <td>Arrive SJO 10:35 PM</td>
+              <td>—</td>
+              <td>Courtyard by Marriott SJO</td>
+            </tr>
+            <tr class="highlight">
+              <td>Day 1</td>
+              <td><span class="flight-date">Fri Apr 17</span></td>
+              <td>Drive to MA, afternoon at park — sloths!</td>
+              <td><span class="driving-tag driving-tag--yellow">3.5 hrs</span></td>
+              <td>Si Como No / Tulemar</td>
+            </tr>
+            <tr>
+              <td>Day 2</td>
+              <td><span class="flight-date">Sat Apr 18</span></td>
+              <td>Drive MA → JW Marriott Guanacaste</td>
+              <td><span class="driving-tag driving-tag--red">6–7 hrs</span></td>
+              <td>JW Marriott Guanacaste</td>
+            </tr>
+            <tr>
+              <td>Day 3</td>
+              <td><span class="flight-date">Sun Apr 19</span></td>
+              <td>Resort day — pool, beach, spa</td>
+              <td>—</td>
+              <td>JW Marriott Guanacaste</td>
+            </tr>
+            <tr>
+              <td>Day 4</td>
+              <td><span class="flight-date">Mon Apr 20</span></td>
+              <td>Beach, surf, horseback riding, golf</td>
+              <td>—</td>
+              <td>JW Marriott Guanacaste</td>
+            </tr>
+            <tr>
+              <td>Day 5</td>
+              <td><span class="flight-date">Tue Apr 21</span></td>
+              <td>Drive JW Marriott → SJO (optional Arenal stop)</td>
+              <td><span class="driving-tag driving-tag--red">4–5 hrs direct<br>7–8 hrs via Arenal</span></td>
+              <td>Courtyard by Marriott SJO</td>
+            </tr>
+            <tr>
+              <td>Day 6</td>
+              <td><span class="flight-date">Wed Apr 22</span></td>
+              <td>Depart SJO 7:55 AM (AC 956)</td>
+              <td>—</td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- PROS/CONS + AT A GLANCE -->
+    <section class="content-grid">
+      <article class="detail-card reveal">
+        <div class="eyebrow">Why this option</div>
+        <h2>Sloths + luxury resort</h2>
+        <p>Still gets the sloth visit at Manuel Antonio (must-do for Emilie and Madison), then 3 nights at the JW Marriott Guanacaste — one of Costa Rica's top luxury resorts with pools, spa, beach, golf, and horseback riding. The tradeoff is significantly more driving.</p>
+        <div class="pros-cons">
+          <div>
+            <h3>Pros</h3>
+            <ul>
+              <li>Still see sloths at Manuel Antonio</li>
+              <li>3 nights at a luxury Marriott resort (Titanium perks!)</li>
+              <li>Beautiful Guanacaste Pacific beaches</li>
+              <li>Resort activities: pool, spa, golf, horseback riding</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Cons</h3>
+            <ul>
+              <li>~17–19 hours total driving (vs ~12 for Option A)</li>
+              <li>Only 1 afternoon for sloths — less margin</li>
+              <li>Two 6+ hour drive days</li>
+              <li>Less wildlife, more resort</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+      <aside class="detail-card reveal accent-card">
+        <div class="eyebrow">At a glance</div>
+        <h2>The numbers</h2>
+        <div class="stat-row">
+          <span class="stat-label">Total driving</span>
+          <strong>~17–19 hrs</strong>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Hotels</span>
+          <strong>2 + airport</strong>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Sloth days</span>
+          <strong>1 afternoon</strong>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Resort nights</span>
+          <strong>3 nights</strong>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Full days</span>
+          <strong>5 (Fri–Tue)</strong>
+        </div>
+      </aside>
+    </section>
+
+    <!-- DAY-BY-DAY DETAIL -->
+    <section class="section-head reveal" id="days">
+      <div class="eyebrow">Day by day</div>
+      <h2>The full plan</h2>
+      <p>From arrival to departure, everything mapped out.</p>
+    </section>
+
+    <!-- Day 0 -->
+    <div class="day-block reveal">
+      <div class="eyebrow">Day 0 · Thu Apr 16</div>
+      <h3>Arrive San José</h3>
+      <p>Air Transat TS 112 lands at SJO at 10:35 PM. Clear customs, pick up rental car, and drive 5 minutes to the Courtyard by Marriott SJO Alajuela. Crash for the night — early start tomorrow.</p>
+      <ul>
+        <li>Flight: Air Transat TS 112, YYZ → SJO, departs 7:05 PM, arrives 10:35 PM</li>
+        <li>Travelers: Daniel, Emilie, Madison</li>
+        <li>Hotel: Courtyard by Marriott San José Airport Alajuela (5 min from SJO)</li>
+      </ul>
+      <div class="day-gallery">
+        <img src="images/sjo-airport.jpg" alt="SJO Airport at sunset">
+        <img src="images/courtyard-sjo/exterior.jpg" alt="Courtyard by Marriott SJO Alajuela">
+      </div>
+    </div>
+
+    <!-- Day 1 - THE SLOTH DAY -->
+    <div class="day-block reveal" style="border-left: 4px solid var(--teal);">
+      <div class="eyebrow">Day 1 · Fri Apr 17 · <span class="driving-tag driving-tag--yellow">3.5 hr drive</span> · The sloth day</div>
+      <h3>Drive to Manuel Antonio &amp; See Sloths</h3>
+      <p>Leave SJO early for the 3.5-hour drive to Manuel Antonio. Head straight to the national park for an afternoon guided tour. This is your one shot at sloths — hire a guide with a spotting scope. The park is open until 3 PM, so aim to arrive by 11:30 AM latest.</p>
+      <ul>
+        <li>Depart SJO area ~6:30 AM, arrive Manuel Antonio ~10:00 AM</li>
+        <li>Check bags at hotel, head straight to Manuel Antonio National Park</li>
+        <li>Guided tour: 2–3 hours — sloths, capuchins, howler monkeys, scarlet macaws</li>
+        <li>Swim at Playa Manuel Antonio inside the park</li>
+        <li>Park closes at 3:00 PM</li>
+        <li>Evening: check into hotel, dinner, early bedtime (long drive tomorrow)</li>
+      </ul>
+      <div class="day-gallery">
+        <img src="images/wildlife/sloth-1.jpg" alt="Three-toed sloth in Manuel Antonio">
+        <img src="images/wildlife/sloth-3.jpg" alt="Three-toed sloth smiling">
+        <img src="images/wildlife/sloth-baby.jpg" alt="Sloth in the canopy">
+        <img src="images/capuchin-manuel-antonio.jpg" alt="White-faced capuchin monkey">
+        <img src="images/manuel-antonio-beach.jpg" alt="Manuel Antonio beach">
+      </div>
+    </div>
+
+    <!-- Day 2 -->
+    <div class="day-block reveal">
+      <div class="eyebrow">Day 2 · Sat Apr 18 · <span class="driving-tag driving-tag--red">6–7 hr drive</span></div>
+      <h3>Drive to JW Marriott Guanacaste</h3>
+      <p>The longest drive of the trip. Head north from Manuel Antonio along the Pacific coast through Jacó and Puntarenas, then cut inland to the Interamericana highway and up through Cañas and Liberia to Guanacaste. No backtracking through San José — arrive in time for a sunset swim.</p>
+      <ul>
+        <li>Depart Manuel Antonio ~7:00 AM</li>
+        <li>Route: Coastal road north through Quepos → Jacó → Puntarenas → Interamericana → Cañas → Liberia → Tamarindo</li>
+        <li>Arrive JW Marriott ~1:00–2:00 PM</li>
+        <li>Check in, explore the resort, hit the pool</li>
+        <li>Sunset on the beach — you've earned it after that drive</li>
+      </ul>
+      <div class="day-gallery">
+        <img src="images/jw-marriott/exterior-lobby.jpg" alt="JW Marriott Guanacaste exterior">
+        <img src="images/jw-marriott/infinity-pool.jpg" alt="JW Marriott infinity pool">
+      </div>
+    </div>
+
+    <!-- Day 3 -->
+    <div class="day-block reveal">
+      <div class="eyebrow">Day 3 · Sun Apr 19</div>
+      <h3>Resort Day — Pool, Beach, Spa</h3>
+      <p>No driving, no schedule. Wake up at the JW Marriott and choose your adventure — infinity pool, beach, spa, or all three. The resort sits on nearly 4,500 acres within the Hacienda Pinilla development with access to 5 different beaches.</p>
+      <ul>
+        <li>Morning: beachfront infinity pool or Playa Mansita beach</li>
+        <li>Spa treatment at the full-service JW spa</li>
+        <li>Lunch at Azul Grill (poolside) or Tamarine (Asian fusion)</li>
+        <li>Afternoon: explore Hacienda Pinilla beaches</li>
+        <li>Sunset cocktails, dinner at Sabanero steakhouse</li>
+      </ul>
+      <div class="day-gallery">
+        <img src="images/jw-marriott/pool-sunset.jpg" alt="JW Marriott pool at sunset">
+        <img src="images/jw-marriott/beach.jpg" alt="Beach at JW Marriott">
+        <img src="images/jw-marriott/spa.jpg" alt="JW Marriott spa">
+      </div>
+    </div>
+
+    <!-- Day 4 -->
+    <div class="day-block reveal">
+      <div class="eyebrow">Day 4 · Mon Apr 20</div>
+      <h3>Beach, Surf &amp; Activities</h3>
+      <p>Another full resort day. Try surfing at Playa Avellanas (one of Costa Rica's best breaks, right near the resort), horseback riding on the beach, or a round of golf at the 18-hole Hacienda Pinilla course.</p>
+      <ul>
+        <li>Surf lesson at Playa Avellanas</li>
+        <li>Horseback riding along the beach</li>
+        <li>Golf at Hacienda Pinilla 18-hole course</li>
+        <li>Catamaran sunset cruise from Tamarindo</li>
+        <li>Day trip option: Rincón de la Vieja National Park (volcanic mud baths, waterfalls)</li>
+      </ul>
+      <div class="day-gallery">
+        <img src="images/tamarindo-beach.jpg" alt="Tamarindo beach sunset">
+        <img src="images/jw-marriott/golf-course.jpg" alt="Hacienda Pinilla golf course">
+        <img src="images/playa-conchal.jpg" alt="Playa Conchal">
+      </div>
+    </div>
+
+    <!-- Day 5 -->
+    <div class="day-block reveal">
+      <div class="eyebrow">Day 5 · Tue Apr 21 · <span class="driving-tag driving-tag--red">4–5 hrs (or 7–8 via Arenal)</span></div>
+      <h3>Drive to SJO (Optional Arenal Stop)</h3>
+      <p>Last adventure day. Two options for getting back to San José:</p>
+      <ul>
+        <li><strong>Direct route (4–5 hrs):</strong> JW Marriott → Liberia → Interamericana → SJO. Leaves time for a morning beach session before departing.</li>
+        <li><strong>Via Arenal (7–8 hrs):</strong> JW Marriott → Arenal/La Fortuna (4–5 hrs) → quick hot springs stop → SJO (3–3.5 hrs). Very long day but adds a volcano experience.</li>
+        <li>Either way, arrive SJO area by evening</li>
+        <li>Hotel: Courtyard by Marriott SJO Alajuela</li>
+        <li>Early bedtime — 7:55 AM flight tomorrow!</li>
+      </ul>
+      <div class="day-gallery">
+        <img src="images/arenal/volcano.jpg" alt="Arenal Volcano (optional stop)">
+        <img src="images/arenal/tabacon-hot-springs.jpg" alt="Tabacon Hot Springs (optional)">
+      </div>
+    </div>
+
+    <!-- Day 6 -->
+    <div class="day-block reveal">
+      <div class="eyebrow">Day 6 · Wed Apr 22</div>
+      <h3>Fly Home</h3>
+      <p>Early morning departure. Air Canada AC 956 departs SJO at 7:55 AM — be at the airport by 5:30 AM. Emilie and Madison fly home to Toronto; Daniel continues to Brazil.</p>
+      <ul>
+        <li>Flight: Air Canada AC 956, SJO → YYZ, departs 7:55 AM, arrives 3:05 PM</li>
+        <li>Return travelers: Emilie &amp; Madison</li>
+        <li>Daniel: separate flight to Brazil for work</li>
+      </ul>
+    </div>
+
+    <!-- HOTEL GALLERIES -->
+    <section class="section-head reveal" id="hotels">
+      <div class="eyebrow">Where you'll stay</div>
+      <h2>The hotels</h2>
+      <p>One night at Manuel Antonio for sloths, three nights of luxury at the JW Marriott.</p>
+    </section>
+
+    <!-- Si Como No / Tulemar Gallery (1 night) -->
+    <div class="day-block reveal">
+      <div class="eyebrow">Manuel Antonio · Night 1</div>
+      <h3>Si Como No or Tulemar</h3>
+      <p>Just one night, so pick whichever has availability. Si Como No is a jungle eco-resort with two pools and a wildlife refuge. Tulemar is TripAdvisor's #1 hotel in Costa Rica with private bungalows and wildlife on the grounds.</p>
+      <div class="hotel-gallery-grid">
+        <img src="images/si-como-no/family-pool-waterslide.jpg" alt="Si Como No pool" loading="lazy">
+        <img src="images/si-como-no/room-interior.jpg" alt="Si Como No room" loading="lazy">
+        <img src="images/si-como-no/jungle-grounds.jpg" alt="Jungle grounds" loading="lazy">
+        <img src="images/tulemar/beach.jpg" alt="Tulemar private beach" loading="lazy">
+        <img src="images/tulemar/bungalow-exterior.jpg" alt="Tulemar bungalow" loading="lazy">
+        <img src="images/tulemar/infinity-pool.jpg" alt="Tulemar pool" loading="lazy">
+      </div>
+    </div>
+
+    <!-- JW Marriott Gallery -->
+    <div class="day-block reveal">
+      <div class="eyebrow">Guanacaste · Nights 2–4</div>
+      <h3>JW Marriott Guanacaste Resort &amp; Spa</h3>
+      <p>310 rooms on nearly 4,500 acres within the Hacienda Pinilla development. Beachfront infinity pool, 6 restaurants, full-service spa, 18-hole golf course, equestrian center, and access to 5 beaches. Titanium elite perks apply.</p>
+      <div class="hotel-gallery-grid">
+        <img src="images/jw-marriott/infinity-pool.jpg" alt="JW Marriott infinity pool" loading="lazy">
+        <img src="images/jw-marriott/beach.jpg" alt="JW Marriott beach" loading="lazy">
+        <img src="images/jw-marriott/room.jpg" alt="JW Marriott room" loading="lazy">
+        <img src="images/jw-marriott/spa.jpg" alt="JW Marriott spa" loading="lazy">
+        <img src="images/jw-marriott/restaurant-azul-grill.jpg" alt="Azul Grill restaurant" loading="lazy">
+        <img src="images/jw-marriott/golf-course.jpg" alt="Hacienda Pinilla golf" loading="lazy">
+        <img src="images/jw-marriott/exterior-lobby.jpg" alt="JW Marriott exterior and lobby" loading="lazy">
+        <img src="images/jw-marriott/pool-sunset.jpg" alt="Pool at sunset" loading="lazy">
+        <img src="images/jw-marriott/courtyard.jpg" alt="JW Marriott courtyard" loading="lazy">
+        <img src="images/jw-marriott/golf-ocean-view.jpg" alt="Golf course ocean view" loading="lazy">
+        <img src="images/jw-marriott/restaurant-sabanero.jpg" alt="Sabanero steakhouse" loading="lazy">
+        <img src="images/jw-marriott/room-bathroom.jpg" alt="JW Marriott bathroom" loading="lazy">
+      </div>
+    </div>
+
+    <!-- COMPARE CALLOUT -->
+    <section class="detail-card reveal compare-callout">
+      <div class="eyebrow">Compare</div>
+      <h2>Want more wildlife time instead?</h2>
+      <p>The <a href="wildlife-volcano.html"><strong>Wildlife &amp; Volcano</strong></a> option gives you 3 full days at Manuel Antonio (much better chance at sloths) plus Arenal hot springs — with ~5–6 fewer hours of driving.</p>
+      <a href="wildlife-volcano.html" class="btn-primary">See Wildlife &amp; Volcano</a>
+    </section>
+
+    <!-- PAGER -->
+    <section class="pager">
+      <a href="index.html" class="pager-link">All options</a>
+      <a href="wildlife-volcano.html" class="pager-link">← Wildlife &amp; Volcano</a>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script>
+  (function() {
+    var map = L.map('route-map-container', {
+      scrollWheelZoom: false,
+      dragging: !L.Browser.mobile
+    });
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 18
+    }).addTo(map);
+
+    // Locations
+    var SJO = [10.0005, -84.2104];
+    var MA  = [9.3920, -84.1380];
+    var JW  = [10.3100, -85.8400];  // JW Marriott near Tamarindo
+
+    // Custom marker icon
+    function makeIcon() {
+      return L.divIcon({
+        className: 'route-marker',
+        html: '<div style="position:relative;width:22px;height:22px;background:#1a4731;border:3px solid #d4a74a;border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,0.3);"></div>',
+        iconSize: [22, 22],
+        iconAnchor: [11, 11],
+        popupAnchor: [0, -14]
+      });
+    }
+
+    // Markers
+    L.marker(SJO, {icon: makeIcon()}).addTo(map)
+      .bindPopup('<strong>SJO Airport</strong>Nights 0 &amp; 5<br>Courtyard by Marriott');
+    L.marker(MA, {icon: makeIcon()}).addTo(map)
+      .bindPopup('<strong>Manuel Antonio</strong>Night 1<br>Si Como No / Tulemar');
+    L.marker(JW, {icon: makeIcon()}).addTo(map)
+      .bindPopup('<strong>JW Marriott Guanacaste</strong>Nights 2–4<br>Luxury beach resort');
+
+    // Route polylines with waypoints
+    var routeStyle = {color: '#1a4731', weight: 3, opacity: 0.7, dashArray: '8 6'};
+
+    // SJO → Manuel Antonio
+    var sjoToMA = [
+      SJO,
+      [9.9400, -84.2800],
+      [9.8700, -84.4300],
+      [9.7500, -84.5200],
+      [9.6200, -84.5800],
+      [9.4800, -84.3400],
+      [9.4300, -84.1600],
+      MA
+    ];
+
+    // Manuel Antonio → JW Marriott (coastal route north, NOT through San José)
+    var maToJW = [
+      MA,
+      [9.4300, -84.1600],  // Quepos
+      [9.6200, -84.5800],  // Jacó
+      [9.7500, -84.5200],  // Tárcoles
+      [9.8600, -84.6200],  // coast near Caldera
+      [9.9800, -84.7400],  // Puntarenas
+      [10.0800, -84.8400],  // north of Puntarenas
+      [10.2000, -84.9500],  // toward Cañas
+      [10.4500, -85.1000],  // Cañas / Interamericana
+      [10.6300, -85.4500],  // Liberia area
+      [10.4500, -85.7500],  // south toward Tamarindo
+      JW
+    ];
+
+    // JW Marriott → SJO (direct)
+    var jwToSJO = [
+      JW,
+      [10.4500, -85.7500],
+      [10.6300, -85.4500],
+      [10.4500, -85.0000],
+      [10.1500, -84.3500],
+      [10.0500, -84.2500],
+      SJO
+    ];
+
+    L.polyline(sjoToMA, routeStyle).addTo(map);
+    L.polyline(maToJW, routeStyle).addTo(map);
+    L.polyline(jwToSJO, routeStyle).addTo(map);
+
+    // Driving time labels
+    function timeLabel(text, latlng) {
+      return L.marker(latlng, {
+        icon: L.divIcon({
+          className: 'route-time-label',
+          html: '<span style="background:#fff;border:1px solid #1a4731;border-radius:999px;padding:4px 10px;font-size:0.75rem;font-weight:700;color:#1a4731;white-space:nowrap;box-shadow:0 2px 6px rgba(0,0,0,0.15);">' + text + '</span>',
+          iconSize: [0, 0],
+          iconAnchor: [-8, 10]
+        })
+      });
+    }
+
+    timeLabel('3.5 hrs', [9.7500, -84.5200]).addTo(map);
+    timeLabel('6–7 hrs', [10.0800, -84.8400]).addTo(map);
+    timeLabel('4–5 hrs', [10.5000, -85.2000]).addTo(map);
+
+    // Fit bounds
+    map.fitBounds([SJO, MA, JW], {padding: [50, 50]});
+  })();
+  </script>
+</body>
+</html>
