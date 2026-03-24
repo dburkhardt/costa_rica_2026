@@ -489,6 +489,7 @@ p {
 
 .option-badge {
   display: inline-flex;
+  width: fit-content;
   padding: 6px 12px;
   border-radius: 999px;
   background: var(--accent);
